@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: untitled
+# Project: server
 # Configurations: Debug
 # =============================================================================
 
@@ -41,35 +41,36 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/huashen/CLionProjects/new_project/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target untitled
+# Object build statements for EXECUTABLE target server
 
 
 #############################################
-# Order-only phony target for untitled
+# Order-only phony target for server
 
-build cmake_object_order_depends_target_untitled: phony || CMakeFiles/untitled.dir
+build cmake_object_order_depends_target_server: phony || CMakeFiles/server.dir
 
-build CMakeFiles/untitled.dir/main.cpp.o: CXX_COMPILER__untitled_Debug /Users/huashen/CLionProjects/new_project/main.cpp || cmake_object_order_depends_target_untitled
-  DEP_FILE = CMakeFiles/untitled.dir/main.cpp.o.d
+build CMakeFiles/server.dir/src/main.cpp.o: CXX_COMPILER__server_Debug /Users/huashen/CLionProjects/new_project/src/main.cpp || cmake_object_order_depends_target_server
+  DEP_FILE = CMakeFiles/server.dir/src/main.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2 -std=gnu++14
-  OBJECT_DIR = CMakeFiles/untitled.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled.dir
+  INCLUDES = -I/Users/huashen/CLionProjects/new_project/include
+  OBJECT_DIR = CMakeFiles/server.dir
+  OBJECT_FILE_DIR = CMakeFiles/server.dir/src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target untitled
+# Link build statements for EXECUTABLE target server
 
 
 #############################################
-# Link the executable untitled
+# Link the executable server
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o
+build server: CXX_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/src/main.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.2
-  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_DIR = CMakeFiles/server.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = untitled
-  TARGET_PDB = untitled.dbg
+  TARGET_FILE = server
+  TARGET_PDB = server.dbg
 
 
 #############################################
@@ -105,7 +106,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/huashen/CLionProjects/new_project/cmake-build-debug
 
-build all: phony untitled
+build all: phony server
 
 # =============================================================================
 # Built-in targets

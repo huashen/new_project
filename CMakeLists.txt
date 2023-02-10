@@ -12,3 +12,4 @@ aux_source_directory(./src DIR_SRCS)
 
 # 需要编译的源文件
 add_executable(server ${DIR_SRCS})
+add_executable(test03_08 ./src/03/test08.cpp)

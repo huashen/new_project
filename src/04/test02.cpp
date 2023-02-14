@@ -5,7 +5,11 @@
 using namespace std;
 
 class ChairMan {
-
+    //构造函数 进行私有化
+private:
+    ChairMan() {
+        cout << "创建国家主席" << endl;
+    }
 };
 
 void test01() {

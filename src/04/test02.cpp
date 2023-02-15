@@ -12,7 +12,7 @@ private:
     }
 
     //拷贝构造私有化
-    ChairMan(const ChairMan &c) {}
+    //ChairMan(const ChairMan& c) {}
 public:
     static ChairMan* getInstance() {
         return singleMan;
@@ -21,7 +21,7 @@ private:
     static ChairMan* singleMan;    
 };
 
-ChairMan* chairMan::singleMan = new ChairMan;
+ChairMan *ChairMan::singleMan = new ChairMan;
 
 void test01() {
     ChairMan *cm1 = ChairMan::getInstance();
@@ -32,12 +32,12 @@ void test01() {
         cout << "cm1与cm2不相同" << endl;
     }
 
-    ChairMan *cm3 = new ChairMan(*cm2);
-    if (cm3 == cm2) {
-        cout << "cm3与cm2相同" << endl;
-    } else {
-        cout << "cm3与cm2不相同" << endl;
-    }
+    // ChairMan *cm3 = new ChairMan(*cm2);
+    // if (cm3 == cm2) {
+    //     cout << "cm3与cm2相同" << endl;
+    // } else {
+    //     cout << "cm3与cm2不相同" << endl;
+    // }
 }
 
 int main() {

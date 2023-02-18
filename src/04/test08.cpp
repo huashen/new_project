@@ -18,7 +18,7 @@ private:
 };
 
 void goodGay(Building *building) {
-    cout << "好基友正在访问" << building->m_SittingRoom <<endl;
+    cout << "好基友正在访问" << building->m_SettingRoom <<endl;
     cout << "好基友正在访问" << building->m_BedRoom <<endl;
 }
 

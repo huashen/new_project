@@ -1,9 +1,12 @@
+/**
+ * 左移运算符重载
+ */
 #include<iostream>
 
 using namespace std;
 
 class Person {
-    friend ostream& operator(ostream &cout, Person & p1);
+    friend ostream& operator<<(ostream &cout, Person & p1);
 
 public:
     Person() {}    
@@ -17,7 +20,7 @@ private:
     int m_B;    
 };
 
-ostream& operator(ostream &cout, Person & p1) {
+ostream& operator<<(ostream &cout, Person & p1) {
     cout << "m_A= " << p1.m_A << " m_B= " << p1.m_B;
     return cout;
 }

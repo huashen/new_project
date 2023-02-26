@@ -18,6 +18,14 @@ public:
         return *this;
     }
 
+    //后置++重载
+    MyInteger operator++(int) {
+        //先保存目前数据
+        MyInteger tmp = *this;
+        m_Num++;
+        return tmp;
+    }
+
     int m_Num;
 };
 
@@ -31,6 +39,10 @@ void test01() {
 
     //前置++
     cout << ++(++myInt) << endl;
+
+    //后置++
+    myInt++;
+    cout << myInt << endl;
 }
 
 int main() {

@@ -50,6 +50,18 @@ void test01() {
     cout << "p2的m_A:" p2.m_A << endl;
 }
 
+void test02() {
+    Person2 p1("狗");
+    Person2 p2("猫");
+
+    Person2 p3("");
+    p3 = p2 = p1;
+    cout << p2.name << endl;
+    cout << p3.name << endl;
+
+    
+}
+
 int main() {
     test01();
     return 0;

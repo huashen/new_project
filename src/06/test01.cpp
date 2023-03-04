@@ -13,14 +13,14 @@ public:
         this->m_Age = age;
     }
     bool operator==(Person & p) {
-        if (this->m_name == p.m_Name && this->m_Age = p.m_Age) {
+        if (this->m_Name == p.m_Name && this->m_Age == p.m_Age) {
             return true;
         }
         return false;
     }
 
     bool operator!=(Person & p) {
-       if (this->m_name == p.m_Name && this->m_Age = p.m_Age) {
+       if (this->m_Name == p.m_Name && this->m_Age == p.m_Age) {
             return false;
         }
         return true; 
@@ -34,7 +34,7 @@ public:
 void test01() {
     Person p1("小明", 10);
     Person p2("小强", 15);
-    Person p2("小强", 15);
+    Person p3("小强", 15);
 
     if (p1 == p2) {
         cout << "p1 和 p2 想等" << endl;

@@ -24,6 +24,10 @@ class News :public BasePage //继承 News类继承于 BasePage类
 
 };
 
+void test02() {
+    cout << "test" << endl;
+}
+
 int main() {
     test02();
     return 0;

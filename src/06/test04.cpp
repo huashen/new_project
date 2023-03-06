@@ -27,6 +27,20 @@ public:
     }
 };
 
+class YULE extentds:public BasePage {
+public:
+    void content() {
+        cout << "娱乐信息" << endl;
+    }    
+};
+
+class Game extentds: public BasePage {
+public:
+    void content() {
+        cout << "KPL" << endl;
+    }    
+};
+
 void test02() {
     cout << "新闻页内容" << endl;
     News news;
@@ -34,6 +48,20 @@ void test02() {
     news.footer();
     news.left();
     news.content();
+
+    cout << "娱乐业" << endl;
+    YULE yl;
+    yl.header();
+    yl.footer();
+    yl.left();
+    yl.content();
+
+    cout << "游戏页内容" << endl;
+    Game game;
+    game.header();
+    game.footer();
+    game.left();
+    game.content();
 }
 
 int main() {

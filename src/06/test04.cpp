@@ -27,14 +27,14 @@ public:
     }
 };
 
-class YULE extentds:public BasePage {
+class YULE :public BasePage {
 public:
     void content() {
         cout << "娱乐信息" << endl;
     }    
 };
 
-class Game extentds: public BasePage {
+class Game : public BasePage {
 public:
     void content() {
         cout << "KPL" << endl;

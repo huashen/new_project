@@ -20,6 +20,7 @@ public:
 };
 
 class Son : public Base {
+public:
     Son() {
         cout << "Son默认构造函数调用" << endl;
     }
@@ -34,5 +35,6 @@ void test01() {
 }
 
 int main() {
+    test01();
     return 0;
 }

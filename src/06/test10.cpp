@@ -31,7 +31,7 @@ public:
 void test01() {
     cout << sizeof(Son) << endl;
     Son s1;
-    s1.m_A;
+    //s1.m_A; 二义性
 
     cout << s1.Base1::m_A << endl;
     cout << s1.Base2::m_A << endl;

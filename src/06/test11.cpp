@@ -35,6 +35,27 @@ void test01() {
     cout << st.m_Age << endl;//可以直接访问，原因已经没有二义性的可能了，只有一份m_Age
 }
 
+//通过地址 找到 偏移量
+//内部工作原理
+void test02()
+{
+	SheepTuo st;
+	st.m_Age = 100;
+
+	//找到Sheep的偏移量操作
+	//cout<< *(int *)((int *)*(int *)&st + 1) << endl;
+
+	cout << *(int*)((int*)*(int *)&st + 1) << endl;
+
+	//找到Tuo的偏移量
+	cout << *((int *)((int *)*((int *)&st + 1) + 1)) << endl;
+	
+	//输出Age
+	cout << ((Animal*)((char *)&st + *(int*)((int*)*(int *)&st + 1)))->m_Age << endl;
+
+}
+
+
 int main() {
     test01();
     return 0;

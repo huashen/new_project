@@ -35,3 +35,5 @@ add_executable(test06_08 ./src/06/test08.cpp)
 add_executable(test06_09 ./src/06/test09.cpp)
 add_executable(test06_10 ./src/06/test10.cpp)
 add_executable(test06_11 ./src/06/test11.cpp)
+
+add_executable(test07_01 ./src/07/test01.cpp)

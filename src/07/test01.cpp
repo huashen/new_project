@@ -26,11 +26,32 @@ public:
     }
 };
 
+void doSpeak(Animal & animal) {
+    animal.speak();
+}
+
 void test01() {
     Cat cat;
+    doSpeak(cat);
+}
+
+void test02()
+{
+    //cout << sizeof(Animal) << endl;
+    //父类指针指向子类对象 多态
+    Animal * animal = new Cat;
+
+    animal->speak();
+    // *(int*)*(int*)animal 函数地址
+    ((void(*)()) (*(int*)*(int*)animal))();
+
+    //  *((int*)*(int*)animal+1)猫吃鱼的地址
+
+    ((void(*)()) (*((int*)*(int*)animal + 1)))();
 }
 
 int main() {
     test01();
+    test02();
     return 0;
 }

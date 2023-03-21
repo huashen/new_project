@@ -25,6 +25,35 @@ Animal::~Animal {
     cout << "Animal的纯虚析构调用" << endl;
 }
 
+class Cat : public Animal {
+public:
+    Cat(const char *name) {
+        this->m_Name = new char[strlen(name) + 1];
+        strcpy(this->m_Name, name);
+    }
+
+    virtual void speak() {
+        cout << "小猫在说话" << endl;
+    }
+
+    ~Cat() {
+        cout << "Cat的析构调用" << endl;
+        if (this->m_Name != NULL) {
+            delete[] this->m_Name;
+            this->m_Name = NULL;
+        }
+    }
+
+    char * m_Name;     
+};
+
+void test01() {
+    Animal * animal = new Cat("TOM");
+    animal->speak();
+
+    delete animal;
+}
+
 int main() {
     test01();
     return 0;

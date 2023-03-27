@@ -28,5 +28,24 @@ void Hero::Attack(Monster *monster) {
         isCrit = this->weapon->getCrit();
     }
 
-    //todo
+    if(isCirt) {
+        damge = damge * 2;
+        cout << "英雄武器触发了暴击效果，怪物收到了双倍的伤害，伤害值：" << damge << endl;
+    }
+
+    if(isHold) {
+        cout << "英雄武器触发了定身效果，怪物停止攻击一回合" << endl;
+    }
+
+    if (addHp > 0) {
+        cout << "英雄的武器触发了吸血效果，英雄增加的血量为 " << addHp << endl;
+    }
+
+    //设置怪物定身
+    monster->m_Hold = isHold;
+
+    int trueDamage = (damge - monster->m_Def) > 0 ? damge - monster->m_Def : 1;
+    monster->m_Hp -= trueDamage;
+    this->m_Hp += addHp;
+    cout << "英雄" << this->m_Name << "攻击了敌人" << monster->m_Name << "造成了伤害" << trueDamage << endl;
 }

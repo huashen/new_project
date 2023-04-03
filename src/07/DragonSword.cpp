@@ -17,3 +17,26 @@ int DragonSword::getSuckBlood() {
         return this->m_BaseDamage * 0.5;
     }
 }
+
+bool DragonSword::getHold() {
+    if(isTrigger(holdRate)) {
+        return true;
+    }
+
+    return false;
+}
+
+bool DragonSword::getCrit() {
+    if(isTrigger(critRate)) {
+        return true;
+    }
+    return false;
+}
+
+bool DragonSword::isTrigger(int rate) {
+    int num = rand() % 100 + 1;
+    if (num < rate) {
+        return true;
+    }
+    return false;
+}
